@@ -8,17 +8,21 @@ namespace Ghost_Db.Models
 {
     public class Capture
     {
+        public int CaptureID { get; set; }
 
         // time stamp
         [Required]
         public DateTime TimeStamp { get; set; }
-        // Videosnapshot
+
         [Required]
-        public string fileLocation { get; set; }
-        // is video/pic...0/1
+        public string Name { get; set; }
+
+        // video or snapshot
         [Required]
-        public bool state { get; set; }
-        //GHOST FK
+        public Boolean Type { get; set; }
+
+
+        // GHOST FK
         public int GhostID { get; set; }
         public Ghost Ghost { get; set; }
     }

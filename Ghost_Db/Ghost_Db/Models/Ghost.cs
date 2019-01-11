@@ -8,13 +8,19 @@ namespace Ghost_Db.Models
 {
     public class Ghost
     {
+        public int GhostID { get; set; }
 
         [Required]
-        public int Serial { get; set; }
+        public int SerialNumber { get; set; }
 
         // TYPE FK
-        public int TypeID { get; set; }
-        public Type Type { get; set; }
+        public int GhostTypeID { get; set; }
+        public GhostType GhostType { get; set; }
+
+
+        // camera schedule FK
+        public int ScheduleID { get; set; }
+        public CameraSchedule CameraSchedule { get; set; }
 
     }
 }
